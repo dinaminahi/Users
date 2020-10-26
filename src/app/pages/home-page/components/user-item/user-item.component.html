@@ -1,0 +1,32 @@
+<mdb-card class="card">
+  <mdb-icon far icon="envelope" class="card-envelope" size="2x"></mdb-icon>
+  <div class="card-img-wraper center">
+    <mdb-card-img class="card-img-wraper-img " src="{{user.avatar}}" alt="User image">
+    </mdb-card-img>
+  </div>
+
+  <mdb-card-body>
+    <mdb-card-text class="card-description">
+      <div class="card-description-slot">
+        <p>ID</p>
+        <span>{{user.id}}</span>
+      </div>
+      <div class="card-description-slot">
+        <p>EMAIL</p>
+        <span>{{user.email}}</span>
+      </div>
+      <div class="card-description-slot">
+        <p>FIRST_NAME</p>
+        <span>{{user.first_name}}</span>
+      </div>
+      <div class="card-description-slot">
+        <p>LAST_NAME</p>
+        <span>{{user.last_name}}</span>
+      </div>
+      <div class="card-description-slot mb-5">
+        <p>AVATAR</p>
+        <span>{{user.avatar.slice(0, 10)}}...</span>
+      </div>
+    </mdb-card-text>
+  </mdb-card-body>
+</mdb-card>

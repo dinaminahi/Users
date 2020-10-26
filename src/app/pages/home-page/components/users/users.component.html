@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="developer">
+    <mdb-icon far icon="heart" class="pt-1"></mdb-icon>
+    <div class="developer-info ">
+      <p class="mb-0 pt-1">Develop With Love By</p>
+      <h6>George Bluth</h6>
+    </div>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let user of usersData">
+      <app-user-item class="col-md-4" [user]="user"></app-user-item>
+    </ng-container>
+  </div>
+</div>

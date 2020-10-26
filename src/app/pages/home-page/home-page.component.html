@@ -1,0 +1,5 @@
+<div *ngFor="let data of HomePage |async">
+  <app-users [usersData]="data.data"></app-users>
+  <app-pagination [currentPage]="data.page" [pageNumber]="data.total_pages" (userClick)="onPageChange($event)">
+  </app-pagination>
+</div>

@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+body {
+  background: $background-color-main;
+}
+
+.card {
+  margin: 20px 5px;
+
+  &-envelope {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  &-img-wraper {
+    margin: 27px auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 15px;
+    transform: rotate(45deg);
+
+    position: relative;
+
+    &-img {
+      transform: rotate(-45deg);
+      position: absolute;
+      top: -6px;
+      left: -71px;
+      bottom: 103px;
+      width: 165px;
+    }
+  }
+
+  &-description {
+    &-slot {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 7px;
+
+      p {
+        margin-bottom: 3px;
+      }
+
+      span {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.developer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: $background-color-white;
+
+  &-info {
+    h6 {
+      font-weight: bold;
+    }
+  }
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-light {
+  color: $primary-color !important;
+}
+
+.pages-current.btn-light {
+  color:$secondary-color !important;
+}
