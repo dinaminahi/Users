@@ -7,14 +7,14 @@ body {
 .card {
   margin: 20px 0;
 
-  &-envelope {
+  &__envelope {
     position: absolute;
     top: 7px;
     right: 5px;
     cursor: pointer;
   }
 
-  &-img-wraper {
+  &__img-wraper {
     margin: 27px auto;
     display: block;
     width: 120px;
@@ -22,10 +22,9 @@ body {
     overflow: hidden;
     border-radius: 15px;
     transform: rotate(45deg);
-
     position: relative;
 
-    &-img {
+    &-logo {
       transform: rotate(-45deg);
       position: absolute;
       top: -6px;
@@ -35,9 +34,8 @@ body {
     }
   }
 
-  &-description {
+  &__description {
     &-slot {
-      display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $border-color;
       margin-bottom: 7px;
@@ -47,7 +45,7 @@ body {
       }
 
       span {
-        color: black;
+        color: $secondary-color;
         font-weight: bold;
       }
     }
@@ -55,25 +53,11 @@ body {
 }
 
 .developer {
-  display: flex;
-  justify-content: space-between;
   width: 200px;
   border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
   background-color: $background-color-white;
-
-  &-info {
-    h6 {
-      font-weight: bold;
-    }
-  }
-}
-
-.pages {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-light {

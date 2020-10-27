@@ -1,29 +1,29 @@
 <mdb-card class="card">
-  <mdb-icon far icon="envelope" class="card-envelope" size="2x"></mdb-icon>
-  <div class="card-img-wraper center">
-    <mdb-card-img class="card-img-wraper-img " src="{{user.avatar}}" alt="User image">
+  <mdb-icon far icon="envelope" class="card__envelope" size="2x"></mdb-icon>
+  <div class="card__img-wraper center">
+    <mdb-card-img class="card__img-wraper-logo" src="{{user.avatar}}" alt="User image">
     </mdb-card-img>
   </div>
 
   <mdb-card-body>
-    <mdb-card-text class="card-description">
-      <div class="card-description-slot">
+    <mdb-card-text class="card__description">
+      <div class="card__description-slot d-flex">
         <p>ID</p>
         <span>{{user.id}}</span>
       </div>
-      <div class="card-description-slot">
+      <div class="card__description-slot d-flex">
         <p>EMAIL</p>
         <span>{{user.email}}</span>
       </div>
-      <div class="card-description-slot">
+      <div class="card__description-slot d-flex">
         <p>FIRST_NAME</p>
         <span>{{user.first_name}}</span>
       </div>
-      <div class="card-description-slot">
+      <div class="card__description-slot d-flex">
         <p>LAST_NAME</p>
         <span>{{user.last_name}}</span>
       </div>
-      <div class="card-description-slot mb-5">
+      <div class="card__description-slot d-flex mb-5">
         <p>AVATAR</p>
         <span>{{user.avatar.slice(0, 10)}}...</span>
       </div>
