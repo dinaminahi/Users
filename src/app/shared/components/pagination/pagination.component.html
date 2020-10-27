@@ -1,0 +1,5 @@
+<div class="pages d-flex justify-content-center align-items-center">
+  <button *ngFor="let page of pagesObjects" [class]="page.class" (click)="page.listener()"
+    [style.display]="page.display" [id]="page.id" type="button" mdbBtn color="light"
+    mdbWavesEffect>{{page.text}}</button>
+</div>
