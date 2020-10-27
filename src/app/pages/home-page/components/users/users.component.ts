@@ -1,13 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { UserItem } from './users.model';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { UserItem } from '../../../../shared/models/userItem.model';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  styleUrls: ['./users.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent {
   @Input() public usersData: UserItem[];
-  constructor() {}
-
-  ngOnInit(): void {}
 }

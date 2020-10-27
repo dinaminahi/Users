@@ -1,34 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HomePage } from 'src/app/pages/home-page/homePage.model';
 import { FacadeService } from 'src/app/services/facade/facade.service';
+import { Users } from 'src/app/shared/models/users.model';
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  public HomePage: Observable<HomePage>;
+  public data$: Observable<Users>;
   public page = 1;
   constructor(private facadeService: FacadeService) {}
 
   ngOnInit(): void {
-    const params = {
-      page: this.page.toString()
-    };
-    this.makeFilterCall(params);
+    this.makeParamCall(this.page.toString());
   }
 
   public onPageChange(newPage: number): void {
     this.page = newPage;
-    const params = {
-      page: newPage.toString()
-    };
-    this.makeFilterCall(params);
+    this.makeParamCall(newPage.toString());
   }
 
-  public makeFilterCall(params: { page: string }): void {
+  public makeParamCall(params: string): void {
     this.facadeService.getHome(params);
-    this.HomePage = this.facadeService.getHomeAll();
+    this.data$ = this.facadeService.getHomeAll();
   }
 }

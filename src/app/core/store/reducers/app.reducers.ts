@@ -9,10 +9,10 @@ const reducer = createReducer(
     return { ...state };
   }),
 
-  on(AppActions.getUsersSuccess, (state, { page }) => {
+  on(AppActions.getUsersSuccess, (state, { users }) => {
     return {
       ...state,
-      home: [page]
+      users
     };
   })
 );

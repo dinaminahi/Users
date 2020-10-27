@@ -1,9 +1,9 @@
-import { HomePage } from 'src/app/pages/home-page/homePage.model';
+import { Users } from 'src/app/shared/models/users.model';
 
 export interface AppState {
-  home: [HomePage?];
+  users: Users;
 }
 
 export const initialAppPageState: AppState = {
-  home: []
+  users: null
 };

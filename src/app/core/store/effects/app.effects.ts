@@ -18,9 +18,9 @@ export class AppEffects {
       ofType(AppActions.getUsers),
       mergeMap((action) =>
         this.http
-          .get<any>(`https://reqres.in/api/users`, { params: action.params })
+          .get<any>(`https://reqres.in/api/users`, { params: { page: action.params } })
           .pipe(
-            map((page) => AppActions.getUsersSuccess({ page })),
+            map((users) => AppActions.getUsersSuccess({ users })),
             take(1),
             catchError(() => EMPTY)
           )
